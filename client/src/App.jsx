@@ -15,22 +15,31 @@ import {
 
 // creating the route for handling the api's
 const router = createBrowserRouter([
+  // HomeLayout | Landing --> register | login | dashboard
   {
     path: '/',
-    element: <Landing/>
+    element: <HomeLayout/>,
+    children: [
+      { 
+        // for attaching the HomeLayout page to Landing 
+        index: true,
+        element: <Landing/>,
+      },
+      {
+        path: 'register',
+        element: <Register/>
+      },
+      {
+        path: 'login',
+        element: <Login/>
+      },
+      {
+        path: 'dashboard',
+        element: <DashboardLayout/>
+      },
+    ],
   },
-  {
-    path: '/register',
-    element: <Register/>
-  },
-  {
-    path: '/login',
-    element: <Login/>
-  },
-  {
-    path: '/dashboard',
-    element: <DashboardLayout/>
-  },
+  
 ])
 // creting the App Component
 function App() {

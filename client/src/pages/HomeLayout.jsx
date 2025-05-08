@@ -1,6 +1,12 @@
+import { Outlet } from "react-router-dom"
+
 function HomeLayout() {
   return (
-    <h1>HomeLayout Page</h1>
+    <div>
+      <nav>Navbar</nav>
+      {/* this is for childrens */}
+      <Outlet />
+    </div>
   )
 }
 export default HomeLayout
