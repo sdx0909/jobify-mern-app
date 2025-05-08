@@ -1,0 +1,9 @@
+npm install @tanstack/react-query 
+@tanstack/react-query-devtools 
+axios 
+dayjs 
+react-icons 
+react-router-dom 
+react-toastify 
+recharts 
+styled-components
