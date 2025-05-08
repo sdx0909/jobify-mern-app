@@ -1,6 +1,8 @@
 // creating the React-Router
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import HomeLayout from "./pages/HomeLayout"
+// import HomeLayout from "./pages/HomeLayout"
+// todo : this is not better approach
+
 
 // creating the route for handling the api's
 const router = createBrowserRouter([
