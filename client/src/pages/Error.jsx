@@ -18,5 +18,12 @@ function Error() {
       </Wrapper>
     );
   }
+  return (
+    <Wrapper>
+      <div>
+        <h3>something went wrong</h3>
+      </div>
+    </Wrapper>
+  );
 }
 export default Error;
