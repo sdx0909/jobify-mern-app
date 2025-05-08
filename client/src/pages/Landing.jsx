@@ -1,4 +1,8 @@
-import styled from "styled-components"
+// import styled from "styled-components"
+import Wrapper from "../assets/wrappers/LandingPage";
+import main from "../assets/images/main.svg";
+import logo from "../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 // creating the styled-button
 // const StyledBtn = styled.button`
@@ -10,27 +14,47 @@ import styled from "styled-components"
 function Landing() {
   return (
     <Wrapper>
-      <h1>Landing Page</h1>
-      <div className="content">some content</div>
-      {/* attaching the styled-button */}
-      {/* <StyledBtn>styled-btn</StyledBtn> */}
+      <nav>
+        <img src={logo} alt="jobify" className="logo" />
+      </nav>
+      <div className="container page">
+        <div className="info">
+          <h1>
+            job <span>tracking</span> app
+          </h1>
+          <p>
+            I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
+            bottle single-origin coffee chia. Aesthetic post-ironic venmo quinoa
+            lo-fi tote bag adaptogen everyday carry meggings +1 brunch narwhal.
+          </p>
+          <Link to="/register" className="btn register-link">
+            Register
+          </Link>
+          <Link to="/login" className="btn">
+            Login | Demo User
+          </Link>
+        </div>
+        <img src={main} alt="job hunt" className="img main-img" />
+      </div>
     </Wrapper>
-  )
+  );
 }
 
-// using Wrapper for better styling 
-const Wrapper = styled.div`
-  background: red;
+// using Wrapper for better styling
+// we can't use it :: we created the styling seperately
+// in assets -> wrapper (folder)
+// -----------------------------------------------------
+// const Wrapper = styled.div`
+//   background: red;
 
-  h1 {
-    color: white;
-  }
+//   h1 {
+//     color: white;
+//   }
 
-  .content {
-    background-color: blue;
-    color: yellow;
-  }
-`
+//   .content {
+//     background-color: blue;
+//     color: yellow;
+//   }
+// `
 
-
-export default Landing
+export default Landing;

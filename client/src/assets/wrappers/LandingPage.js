@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   nav {
@@ -47,4 +47,5 @@ const Wrapper = styled.section`
     }
   }
 `;
+
 export default Wrapper;
