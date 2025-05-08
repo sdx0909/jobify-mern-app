@@ -1,5 +1,5 @@
 // creating the React-Router
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import HomeLayout from "./pages/HomeLayout"
 // instead of above we use following approch
 import {
@@ -8,48 +8,46 @@ import {
   Landing,
   Register,
   Login,
-  Error
-} from "../src/pages"
+  Error,
+} from "../src/pages";
 // todo : this is not better approach
-
 
 // creating the route for handling the api's
 const router = createBrowserRouter([
   // HomeLayout | Landing --> register | login | dashboard
   {
-    path: '/',
-    element: <HomeLayout/>,
+    path: "/",
+    element: <HomeLayout />,
     // attaching the error-page
-    errorElement: <Error/>,
+    errorElement: <Error />,
     children: [
-      { 
-        // for attaching the HomeLayout page to Landing 
+      {
+        // for attaching the HomeLayout page to Landing
         // setting "index" page
         index: true,
-        element: <Landing/>,
+        element: <Landing />,
       },
       {
-        path: 'register',
-        element: <Register/>
+        path: "register",
+        element: <Register />,
       },
       {
-        path: 'login',
-        element: <Login/>
+        path: "login",
+        element: <Login />,
       },
       {
-        path: 'dashboard',
-        element: <DashboardLayout/>
+        path: "dashboard",
+        element: <DashboardLayout />,
       },
     ],
   },
-  
-])
+]);
 // creting the App Component
 function App() {
   return (
     // setting up the router
-    <RouterProvider router={router}/>
-  )
-};
+    <RouterProvider router={router} />
+  );
+}
 
-export default App
+export default App;
