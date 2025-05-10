@@ -1,6 +1,4 @@
-function AppJob() {
-  return (
-    <h1>AppJob</h1>
-  )
+function AddJob() {
+  return <h1>AddJob</h1>;
 }
-export default AppJob
+export default AddJob;
